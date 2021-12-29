@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// ProjectName: asic_watch2
+// ProjectName: asic_watch
 // Description: Top level of the design
 // Coder      : G.Cabo & L.Ledoux
 // References :
@@ -13,7 +13,7 @@
     `endif
 `endif
 
-module asic_watch2 (
+module asic_watch (
     //input wire clk_system_i, //  10 MHz
     input wire sysclk_i, // 32.768 KHz shared with SoC
     input wire smode_i, // safe mode
