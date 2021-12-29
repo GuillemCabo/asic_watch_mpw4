@@ -1,0 +1,198 @@
+OpenROAD GITDIR-NOTFOUND 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef at line 68119.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef
+[INFO ODB-0127] Reading DEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/placement/13-resizer_timing.def
+[INFO ODB-0128] Design: asic_watch
+[INFO ODB-0130]     Created 46 pins.
+[INFO ODB-0131]     Created 1749 components and 6047 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 4708 connections.
+[INFO ODB-0133]     Created 429 nets and 1338 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/placement/13-resizer_timing.def
+###############################################################################
+# Created by write_sdc
+# Sat Dec 25 14:41:38 2021
+###############################################################################
+current_design asic_watch
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name sysclk_i -period 10.0000 [get_ports {sysclk_i}]
+set_clock_transition 0.1500 [get_clocks {sysclk_i}]
+set_clock_uncertainty 0.2500 sysclk_i
+set_propagated_clock [get_clocks {sysclk_i}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[0]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[10]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[11]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[1]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[2]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[3]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[4]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[5]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[6]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[7]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[8]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[9]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {dvalid_i}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {rstn_i}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {smode_i}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[6]}]
+###############################################################################
+# Environment
+###############################################################################
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {dvalid_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {rstn_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {smode_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {sysclk_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[11]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[10]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[9]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[8]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[7]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[6]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[5]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[4]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[3]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[2]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[1]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[0]}]
+set_timing_derate -early 0.9000
+set_timing_derate -late 1.1000
+###############################################################################
+# Design Rules
+###############################################################################
+set_max_fanout 5.0000 [current_design]
+[INFO GRT-0020] Min routing layer: li1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[WARNING GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0224] Chose via L1M1_PR as default.
+[INFO GRT-0224] Chose via M1M2_PR as default.
+[INFO GRT-0224] Chose via M2M3_PR as default.
+[INFO GRT-0224] Chose via M3M4_PR as default.
+[INFO GRT-0224] Chose via M4M5_PR as default.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 15067
+[INFO GRT-0019] Found 8 clock nets.
+[WARNING GRT-0036] Pin segment_xhxx[2] is outside die area.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 29
+[INFO GRT-0017] Processing 17143 blockages on layer li1.
+[INFO GRT-0017] Processing 4697 blockages on layer met1.
+[INFO GRT-0017] Processing 4 blockages on layer met4.
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical        27735         26805          3.35%
+met1       Horizontal      36980         31574          14.62%
+met2       Vertical        27735         27300          1.57%
+met3       Horizontal      18490         18186          1.64%
+met4       Vertical        11094         10886          1.87%
+met5       Horizontal       3698          3570          3.46%
+---------------------------------------------------------------
+
+[INFO GRT-0111] Final number of vias: 769
+[INFO GRT-0112] Final usage 3D: 4468
+[WARNING GRT-0211] dbGcellGrid already exists in db. Clearing existing dbGCellGrid.
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1              26805           978            3.65%             0 /  0 /  0
+met1             31574          1018            3.22%             0 /  0 /  0
+met2             27300           165            0.60%             0 /  0 /  0
+met3             18186             0            0.00%             0 /  0 /  0
+met4             10886             0            0.00%             0 /  0 /  0
+met5              3570             0            0.00%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           118321          2161            1.83%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 22204 um
+[INFO]: Setting RC values...
+[WARNING RSZ-0021] no estimated parasitics. Using wire load models.
+[INFO RSZ-0033] No hold violations found.
+Placement Analysis
+---------------------------------
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL           14339.3 u
+legalized HPWL          14604.1 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 159 instances
+[INFO DPL-0021] HPWL before           14604.1 u
+[INFO DPL-0022] HPWL after            14339.3 u
+[INFO DPL-0023] HPWL delta               -1.8 %

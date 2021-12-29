@@ -1,0 +1,133 @@
+[INFO]: Current run directory is /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32
+[INFO]: Preparing LEF Files
+[INFO]: Extracting the number of available metal layers from /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef
+[INFO]: The number of available metal layers is 6
+[INFO]: The available metal layers are li1 met1 met2 met3 met4 met5
+[INFO]: Merging LEF Files...
+[INFO]: Trimming Liberty...
+[INFO]: Generating Exclude List...
+[INFO]: Generating Exclude List...
+[INFO]: Creating ::env(DONT_USE_CELLS)...
+[INFO]: Storing configs into config.tcl ...
+[INFO]: Preparation complete
+[INFO]: Running Synthesis...
+[INFO]: current step index: 1
+[INFO]: Changing netlist from 0 to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 2
+[INFO]: Synthesis was successful
+[INFO]: Running Floorplanning...
+[INFO]: Running Initial Floorplanning...
+[INFO]: current step index: 3
+[INFO]: Core area width: 488.96000000000004
+[INFO]: Core area height: 478.24
+[INFO]: Final Vertical PDN Offset: 16.32
+[INFO]: Final Horizontal PDN Offset: 16.65
+[INFO]: Final Vertical PDN Pitch: 153.6
+[INFO]: Final Horizontal PDN Pitch: 153.18
+[INFO]: Changing layout from 0 to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/3-verilog2def_openroad.def
+[INFO]: Running IO Placement...
+[INFO]: current step index: 4
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/3-verilog2def_openroad.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/4-ioPlacer.def
+[INFO]: Running Tap/Decap Insertion...
+[INFO]: current step index: 5
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/4-ioPlacer.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/floorplan/asic_watch.floorplan.def
+[INFO]: Power planning the following nets
+[INFO]: Power: vccd1
+[INFO]: Ground: vssd1
+[INFO]: Generating PDN...
+[INFO]: current step index: 6
+[INFO]: current step index: 7
+[INFO]: PDN generation was successful.
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/floorplan/asic_watch.floorplan.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/6-pdn.def
+[INFO]: Running Placement...
+[INFO]: Running Global Placement...
+[INFO]: current step index: 8
+[INFO]: Global placement was successful
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/floorplan/6-pdn.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/8-replace.def
+[INFO]: Running Resizer Design Optimizations...
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/8-replace.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/8-resizer.def
+[INFO]: Writing Verilog...
+[INFO]: current step index: 9
+[INFO]: Changing netlist from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis.v to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 10
+[INFO]: Running Detailed Placement...
+[INFO]: current step index: 11
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/8-resizer.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def
+[INFO]: Running TritonCTS...
+[INFO]: current step index: 12
+[INFO]: Trimming Liberty...
+[INFO]: Generating Exclude List...
+[INFO]: Clock Tree Synthesis was successful
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/cts/asic_watch.cts.def
+[INFO]: Writing Verilog...
+[INFO]: current step index: 13
+[INFO]: Changing netlist from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_cts.v
+[INFO]: Running Resizer Timing Optimizations...
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/cts/asic_watch.cts.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/13-resizer_timing.def
+[INFO]: Writing Verilog...
+[INFO]: current step index: 14
+[INFO]: Changing netlist from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_cts.v to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 15
+[INFO]: Routing...
+[INFO]: Running Resizer Timing Optimizations...
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/13-resizer_timing.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/15-resizer_timing.def
+[INFO]: Writing Verilog...
+[INFO]: current step index: 16
+[INFO]: Changing netlist from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v
+[INFO]: Running Static Timing Analysis...
+[INFO]: current step index: 17
+[INFO]: Obstructions will be added over the whole die area: met5 0 0 500 500
+[INFO]: Adding routing obstructions...
+[WARNING]: Specifying a routing obstruction is now done using the coordinates
+[WARNING]: of its bounding box instead of the now deprecated (x, y, size_x, size_y).
+[INFO]: Obstructions added over met5 0 0 500 500
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/15-resizer_timing.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/15-resizer_timing.obs.def
+[INFO]: Running Detailed Placement...
+[INFO]: current step index: 18
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/placement/15-resizer_timing.obs.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def
+[INFO]: Running Global Routing...
+[INFO]: current step index: 19
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/placement/asic_watch.placement.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.def
+[INFO]: Changing layout from 0 to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.guide
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.def
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.guide to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.guide
+[INFO]: Current Def is /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.def
+[INFO]: Current Guide is /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.guide
+[INFO]: Running Fill Insertion...
+[INFO]: current step index: 20
+[INFO]: Changing layout from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/19-fastroute.def to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/tmp/routing/20-addspacers.def
+[INFO]: Writing Verilog...
+[INFO]: current step index: 21
+[INFO]: Changing netlist from /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_optimized.v to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/synthesis/asic_watch.synthesis_preroute.v
+[INFO]: Running Detailed Routing...
+[INFO]: current step index: 22
+[ERROR]: during executing: "openroad -exit /openlane/scripts/openroad/or_droute.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/logs/routing/22-tritonRoute.log"
+[ERROR]: Exit code: 1
+[ERROR]: Last 10 lines:
+child killed: SIGABRT
+
+[ERROR]: Please check openroad  log file
+[ERROR]: Dumping to /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/error.log
+[INFO]: Calculating Runtime From the Start...
+[INFO]: flow failed for asic_watch/2021.12.25_14.45.32 in 0h1m7s
+[INFO]: Generating Final Summary Report...
+[INFO]: Design Name: asic_watch
+Run Directory: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32
+Source not found.
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/results/lvs/asic_watch.lvs_parsed.gds.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.
+[INFO]: check full report here: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.45.32/reports/final_summary_report.csv
+[INFO]: Saving Runtime Environment
+[ERROR]: Flow Failed.

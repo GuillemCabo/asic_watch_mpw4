@@ -1,0 +1,396 @@
+OpenROAD GITDIR-NOTFOUND 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ODB-0222] Reading LEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef
+[WARNING ODB-0220] WARNING (LEFPARS-2036): SOURCE statement is obsolete in version 5.6 and later.
+The LEF parser will ignore this statement.
+To avoid this warning in the future, remove this statement from the LEF file with version 5.6 or later. See file /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef at line 68119.
+
+[INFO ODB-0223]     Created 13 technology layers
+[INFO ODB-0224]     Created 25 technology vias
+[INFO ODB-0225]     Created 441 library cells
+[INFO ODB-0226] Finished LEF file:  /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/tmp/merged_unpadded.lef
+[INFO ODB-0127] Reading DEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/results/placement/asic_watch.placement.def
+[INFO ODB-0128] Design: asic_watch
+[INFO ODB-0130]     Created 46 pins.
+[INFO ODB-0131]     Created 1739 components and 5987 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 4668 connections.
+[INFO ODB-0133]     Created 419 nets and 1318 connections.
+[INFO ODB-0134] Finished DEF file: /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.40.46/results/placement/asic_watch.placement.def
+###############################################################################
+# Created by write_sdc
+# Sat Dec 25 14:40:57 2021
+###############################################################################
+current_design asic_watch
+###############################################################################
+# Timing Constraints
+###############################################################################
+create_clock -name sysclk_i -period 10.0000 [get_ports {sysclk_i}]
+set_clock_transition 0.1500 [get_clocks {sysclk_i}]
+set_clock_uncertainty 0.2500 sysclk_i
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[0]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[10]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[11]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[1]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[2]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[3]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[4]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[5]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[6]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[7]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[8]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {cfg_i[9]}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {dvalid_i}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {rstn_i}]
+set_input_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {smode_i}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_hxxx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xhxx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxmx[6]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[0]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[1]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[2]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[3]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[4]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[5]}]
+set_output_delay 2.0000 -clock [get_clocks {sysclk_i}] -add_delay [get_ports {segment_xxxm[6]}]
+###############################################################################
+# Environment
+###############################################################################
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_hxxx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xhxx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxmx[0]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[6]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[5]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[4]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[3]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[2]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[1]}]
+set_load -pin_load 0.0334 [get_ports {segment_xxxm[0]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {dvalid_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {rstn_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {smode_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {sysclk_i}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[11]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[10]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[9]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[8]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[7]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[6]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[5]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[4]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[3]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[2]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[1]}]
+set_driving_cell -lib_cell sky130_fd_sc_hd__inv_1 -pin {Y} -input_transition_rise 0.0000 -input_transition_fall 0.0000 [get_ports {cfg_i[0]}]
+set_timing_derate -early 0.9000
+set_timing_derate -late 1.1000
+###############################################################################
+# Design Rules
+###############################################################################
+set_max_fanout 5.0000 [current_design]
+[INFO]: Setting RC values...
+[INFO]: Configuring cts characterization...
+[INFO]: Performing clock tree synthesis...
+[INFO]: Looking for the following net(s): sysclk_i
+[INFO]: Running Clock Tree Synthesis...
+[INFO CTS-0038] Number of created patterns = 50000.
+[INFO CTS-0038] Number of created patterns = 100000.
+[INFO CTS-0039] Number of created patterns = 137808.
+[INFO CTS-0084] Compiling LUT.
+Min. len    Max. len    Min. cap    Max. cap    Min. slew   Max. slew
+2           8           1           36          1           150         
+[WARNING CTS-0043] 4752 wires are pure wire and no slew degradation.
+TritonCTS forced slew degradation on these wires.
+[INFO CTS-0046]     Number of wire segments: 136611.
+[INFO CTS-0047]     Number of keys in characterization LUT: 1923.
+[INFO CTS-0048]     Actual min input cap: 1.
+[INFO CTS-0001] Running TritonCTS with user-specified clock roots: sysclk_i.
+[INFO CTS-0095] Net "sysclk_i" found.
+[INFO CTS-0010]  Clock net "sysclk_i" has 30 sinks.
+[INFO CTS-0008] TritonCTS found 1 clock nets.
+[INFO CTS-0097] Characterization used 3 buffer(s) types.
+[INFO CTS-0027] Generating H-Tree topology for net sysclk_i.
+[INFO CTS-0028]  Total number of sinks: 30.
+[INFO CTS-0029]  Sinks will be clustered in groups of up to 25 and with maximum cluster diameter of 50.0 um.
+[INFO CTS-0030]  Number of static layers: 0.
+[INFO CTS-0020]  Wire segment unit: 13000  dbu (13 um).
+[INFO CTS-0023]  Original sink region: [(146085, 99220), (199445, 148180)].
+[INFO CTS-0024]  Normalized sink region: [(11.2373, 7.63231), (15.3419, 11.3985)].
+[INFO CTS-0025]     Width:  4.1046.
+[INFO CTS-0026]     Height: 3.7662.
+[WARNING CTS-0045] Creating fake entries in the LUT.
+ Level 1
+    Direction: Horizontal
+    Sinks per sub-region: 15
+    Sub-region size: 2.0523 X 3.7662
+[INFO CTS-0034]     Segment length (rounded): 1.
+    Key: 136701 outSlew: 7 load: 1 length: 1 isBuffered: true
+ Level 2
+    Direction: Vertical
+    Sinks per sub-region: 8
+    Sub-region size: 2.0523 X 1.8831
+[INFO CTS-0034]     Segment length (rounded): 1.
+    Key: 136706 outSlew: 7 load: 1 length: 1 isBuffered: true
+[INFO CTS-0032]  Stop criterion found. Max number of sinks is 15.
+[INFO CTS-0035]  Number of sinks covered: 30.
+[INFO CTS-0036]  Average source sink dist: 13935.50 dbu.
+[INFO CTS-0037]  Number of outlier sinks: 0.
+[INFO CTS-0018]     Created 7 clock buffers.
+[INFO CTS-0012]     Minimum number of buffers in the clock path: 3.
+[INFO CTS-0013]     Maximum number of buffers in the clock path: 3.
+[INFO CTS-0015]     Created 7 clock nets.
+[INFO CTS-0016]     Fanout distribution for the current clock = 7:3, 9:1..
+[INFO CTS-0017]     Max level of the clock tree: 2.
+[INFO CTS-0098] Clock net "sysclk_i"
+[INFO CTS-0099]  Sinks 30
+[INFO CTS-0100]  Leaf buffers 0
+[INFO CTS-0101]  Average sink wire length 191.0 um
+[INFO CTS-0102]  Path depth 3 - 3
+[INFO]: Repairing long wires on clock nets...
+[INFO RSZ-0058] Using max wire length 2319um.
+[INFO]: Legalizing...
+Placement Analysis
+---------------------------------
+total displacement         53.0 u
+average displacement        0.0 u
+max displacement            7.0 u
+original HPWL           14153.1 u
+legalized HPWL          14452.2 u
+delta HPWL                    2 %
+
+[INFO DPL-0020] Mirrored 158 instances
+[INFO DPL-0021] HPWL before           14452.2 u
+[INFO DPL-0022] HPWL after            14184.7 u
+[INFO DPL-0023] HPWL delta               -1.9 %
+cts_report
+[INFO CTS-0003] Total number of Clock Roots: 1.
+[INFO CTS-0004] Total number of Buffers Inserted: 7.
+[INFO CTS-0005] Total number of Clock Subnets: 7.
+[INFO CTS-0006] Total number of Sinks: 30.
+cts_report_end
+check_report
+No paths found.
+check_report_end
+timing_report
+No paths found.
+timing_report_end
+min_max_report
+Startpoint: _648_ (rising edge-triggered flip-flop clocked by sysclk_i)
+Endpoint: _651_ (removal check against rising-edge clock sysclk_i)
+Path Group: **async_default**
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sysclk_i (rise edge)
+                          0.57    0.57   clock network delay (propagated)
+                  0.13    0.00    0.57 ^ _648_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                  0.48    0.69    1.25 ^ _648_/Q (sky130_fd_sc_hd__dfrtp_4)
+    37    0.17                           inst_count10m.rstn_i (net)
+                  0.48    0.00    1.25 ^ _651_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                  1.25   data arrival time
+
+                          0.00    0.00   clock sysclk_i (rise edge)
+                          0.71    0.71   clock network delay (propagated)
+                          0.25    0.96   clock uncertainty
+                         -0.07    0.89   clock reconvergence pessimism
+                                  0.89 ^ _651_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                          0.47    1.36   library removal time
+                                  1.36   data required time
+-----------------------------------------------------------------------------
+                                  1.36   data required time
+                                 -1.25   data arrival time
+-----------------------------------------------------------------------------
+                                 -0.11   slack (VIOLATED)
+
+
+Startpoint: _650_ (rising edge-triggered flip-flop clocked by sysclk_i)
+Endpoint: _650_ (rising edge-triggered flip-flop clocked by sysclk_i)
+Path Group: sysclk_i
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sysclk_i (rise edge)
+                          0.56    0.56   clock network delay (propagated)
+                  0.14    0.00    0.56 ^ _650_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                  0.12    0.37    0.93 ^ _650_/Q (sky130_fd_sc_hd__dfrtp_1)
+     3    0.01                           inst_div32768.count_int[0] (net)
+                  0.12    0.00    0.93 ^ _593_/A (sky130_fd_sc_hd__inv_2)
+                  0.03    0.03    0.96 v _593_/Y (sky130_fd_sc_hd__inv_2)
+     1    0.00                           _043_ (net)
+                  0.03    0.00    0.96 v _650_/D (sky130_fd_sc_hd__dfrtp_1)
+                                  0.96   data arrival time
+
+                          0.00    0.00   clock sysclk_i (rise edge)
+                          0.69    0.69   clock network delay (propagated)
+                          0.25    0.94   clock uncertainty
+                         -0.13    0.81   clock reconvergence pessimism
+                                  0.81 ^ _650_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                         -0.02    0.80   library hold time
+                                  0.80   data required time
+-----------------------------------------------------------------------------
+                                  0.80   data required time
+                                 -0.96   data arrival time
+-----------------------------------------------------------------------------
+                                  0.17   slack (MET)
+
+
+Startpoint: rstn_i (input port clocked by sysclk_i)
+Endpoint: _648_ (recovery check against rising-edge clock sysclk_i)
+Path Group: **async_default**
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock sysclk_i (rise edge)
+                          0.00    0.00   clock network delay (propagated)
+                          2.00    2.00 ^ input external delay
+                  0.08    0.06    2.06 ^ rstn_i (in)
+     1    0.01                           rstn_i (net)
+                  0.08    0.00    2.06 ^ input14/A (sky130_fd_sc_hd__buf_8)
+                  0.18    0.22    2.27 ^ input14/X (sky130_fd_sc_hd__buf_8)
+    14    0.11                           net14 (net)
+                  0.18    0.02    2.29 ^ _648_/RESET_B (sky130_fd_sc_hd__dfrtp_4)
+                                  2.29   data arrival time
+
+                         10.00   10.00   clock sysclk_i (rise edge)
+                          0.57   10.57   clock network delay (propagated)
+                         -0.25   10.32   clock uncertainty
+                          0.00   10.32   clock reconvergence pessimism
+                                 10.32 ^ _648_/CLK (sky130_fd_sc_hd__dfrtp_4)
+                          0.20   10.52   library recovery time
+                                 10.52   data required time
+-----------------------------------------------------------------------------
+                                 10.52   data required time
+                                 -2.29   data arrival time
+-----------------------------------------------------------------------------
+                                  8.22   slack (MET)
+
+
+Startpoint: _645_ (falling edge-triggered flip-flop)
+Endpoint: segment_xhxx[2] (output port clocked by sysclk_i)
+Path Group: sysclk_i
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.03    0.00    0.00 v _645_/CLK_N (sky130_fd_sc_hd__dfbbn_2)
+                  0.09    0.72    0.72 v _645_/Q (sky130_fd_sc_hd__dfbbn_2)
+     6    0.04                           inst_count24h.count_int[2] (net)
+                  0.09    0.00    0.73 v _441_/A (sky130_fd_sc_hd__inv_2)
+                  0.05    0.09    0.81 ^ _441_/Y (sky130_fd_sc_hd__inv_2)
+     3    0.01                           _184_ (net)
+                  0.05    0.00    0.81 ^ _442_/A (sky130_fd_sc_hd__or2_1)
+                  0.04    0.10    0.91 ^ _442_/X (sky130_fd_sc_hd__or2_1)
+     1    0.00                           _185_ (net)
+                  0.04    0.00    0.91 ^ _443_/A (sky130_fd_sc_hd__dlymetal6s2s_1)
+                  0.16    0.18    1.09 ^ _443_/X (sky130_fd_sc_hd__dlymetal6s2s_1)
+     3    0.01                           _024_ (net)
+                  0.16    0.00    1.09 ^ _444_/A (sky130_fd_sc_hd__clkinv_2)
+                  0.04    0.06    1.15 v _444_/Y (sky130_fd_sc_hd__clkinv_2)
+     1    0.00                           _023_ (net)
+                  0.04    0.00    1.15 v _630_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.06    0.30    1.46 v _630_/X (sky130_fd_sc_hd__mux2_1)
+     1    0.00                           _031_ (net)
+                  0.06    0.00    1.46 v _452_/A (sky130_fd_sc_hd__nor3b_1)
+                  0.24    0.27    1.73 ^ _452_/Y (sky130_fd_sc_hd__nor3b_1)
+     2    0.01                           _190_ (net)
+                  0.24    0.00    1.73 ^ _453_/A (sky130_fd_sc_hd__or2b_1)
+                  0.05    0.16    1.88 ^ _453_/X (sky130_fd_sc_hd__or2b_1)
+     1    0.00                           _191_ (net)
+                  0.05    0.00    1.88 ^ _454_/A (sky130_fd_sc_hd__clkbuf_1)
+                  0.11    0.14    2.03 ^ _454_/X (sky130_fd_sc_hd__clkbuf_1)
+     2    0.01                           _032_ (net)
+                  0.11    0.00    2.03 ^ _631_/A0 (sky130_fd_sc_hd__mux2_1)
+                  0.14    0.23    2.26 ^ _631_/X (sky130_fd_sc_hd__mux2_1)
+     4    0.01                           _034_ (net)
+                  0.14    0.00    2.26 ^ _470_/B (sky130_fd_sc_hd__or2_1)
+                  0.07    0.15    2.41 ^ _470_/X (sky130_fd_sc_hd__or2_1)
+     2    0.01                           _204_ (net)
+                  0.07    0.00    2.41 ^ _471_/A (sky130_fd_sc_hd__clkbuf_2)
+                  0.13    0.19    2.60 ^ _471_/X (sky130_fd_sc_hd__clkbuf_2)
+     5    0.02                           _205_ (net)
+                  0.13    0.00    2.60 ^ _487_/A (sky130_fd_sc_hd__inv_2)
+                  0.05    0.08    2.67 v _487_/Y (sky130_fd_sc_hd__inv_2)
+     3    0.01                           _220_ (net)
+                  0.05    0.00    2.67 v _493_/A3 (sky130_fd_sc_hd__a31o_1)
+                  0.07    0.27    2.94 v _493_/X (sky130_fd_sc_hd__a31o_1)
+     3    0.01                           _225_ (net)
+                  0.07    0.00    2.94 v _495_/B (sky130_fd_sc_hd__or3b_1)
+                  0.11    0.45    3.39 v _495_/X (sky130_fd_sc_hd__or3b_1)
+     3    0.01                           _227_ (net)
+                  0.11    0.00    3.39 v _496_/B (sky130_fd_sc_hd__or3b_4)
+                  0.12    0.52    3.91 v _496_/X (sky130_fd_sc_hd__or3b_4)
+     1    0.04                           _228_ (net)
+                  0.13    0.01    3.92 v _497_/A (sky130_fd_sc_hd__buf_2)
+                  0.09    0.24    4.16 v _497_/X (sky130_fd_sc_hd__buf_2)
+     1    0.03                           segment_xhxx[2] (net)
+                  0.09    0.00    4.16 v segment_xhxx[2] (out)
+                                  4.16   data arrival time
+
+                         10.00   10.00   clock sysclk_i (rise edge)
+                          0.00   10.00   clock network delay (propagated)
+                         -0.25    9.75   clock uncertainty
+                          0.00    9.75   clock reconvergence pessimism
+                         -2.00    7.75   output external delay
+                                  7.75   data required time
+-----------------------------------------------------------------------------
+                                  7.75   data required time
+                                 -4.16   data arrival time
+-----------------------------------------------------------------------------
+                                  3.59   slack (MET)
+
+
+min_max_report_end
+clock_skew_report
+Clock sysclk_i
+Latency      CRPR       Skew
+_662_/CLK ^
+   0.71
+_663_/CLK ^
+   0.56     -0.07       0.08
+
+clock_skew_report_end
+wns_report
+wns 0.00
+wns_report_end
+tns_report
+tns 0.00
+tns_report_end

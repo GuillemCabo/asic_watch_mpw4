@@ -1,0 +1,32 @@
+
+34. Executing CHECK pass (checking for obvious problems).
+Checking module asic_watch...
+Warning: Wire asic_watch.\segment_xxxm [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [0] is used but has no driver.
+Found and reported 28 problems.

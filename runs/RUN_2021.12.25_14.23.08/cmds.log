@@ -1,0 +1,90 @@
+Sat Dec 25 14:23:08 UTC 2021 - Executing "openroad -python /openlane/scripts/extract_metal_layers.py -t /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/met_layers_list.txt"
+
+Sat Dec 25 14:23:09 UTC 2021 - Executing "/openlane/scripts/mergeLef.py -i /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_8.lef /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef} -o /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Sat Dec 25 14:23:09 UTC 2021 - Executing "/openlane/scripts/libtrim.pl /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/trimmed.lib.exclude.list > /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/trimmed.lib"
+
+Sat Dec 25 14:23:10 UTC 2021 - Executing "openroad -python /openlane/scripts/new_tracks.py -i /home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/config.tracks"
+
+Sat Dec 25 14:23:10 UTC 2021 - Executing "echo {openlane 2021.10.25_20.35.00} > /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/OPENLANE_VERSION"
+
+Sat Dec 25 14:23:10 UTC 2021 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Sat Dec 25 14:23:10 UTC 2021 - Executing "yosys -c /openlane/scripts/synth.tcl -l /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Sat Dec 25 14:23:12 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:12 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:12 UTC 2021 - Executing "sed -i /defparam/d /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/results/synthesis/asic_watch.synthesis.v"
+
+Sat Dec 25 14:23:12 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_sta.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/synthesis/1-opensta"
+
+Sat Dec 25 14:23:13 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/floorplan/3-verilog2def.openroad.log"
+
+Sat Dec 25 14:23:14 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_ioplacer.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/floorplan/4-ioPlacer.log"
+
+Sat Dec 25 14:23:15 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/floorplan/5-tapcell.log"
+
+Sat Dec 25 14:23:15 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_pdn.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/floorplan/7-pdn.log"
+
+Sat Dec 25 14:23:17 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_replace.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/8-replace.log"
+
+Sat Dec 25 14:23:18 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_resizer.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/8-resizer_design_optimization.log"
+
+Sat Dec 25 14:23:19 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/9-write_verilog.log"
+
+Sat Dec 25 14:23:20 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:20 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:20 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_sta.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/9-resizer_design_optimization_sta"
+
+Sat Dec 25 14:23:21 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/11-opendp.log"
+
+Sat Dec 25 14:23:22 UTC 2021 - Executing "/openlane/scripts/libtrim.pl /home/zerotoasic/asic_tools/pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/cts.lib.exclude.list > /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/tmp/cts.lib"
+
+Sat Dec 25 14:23:22 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_cts.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/cts/12-cts.log"
+
+Sat Dec 25 14:23:59 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/13-write_verilog.log"
+
+Sat Dec 25 14:23:59 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_cts.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:59 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:23:59 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_resizer_timing.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/13-resizer_timing_optimization.log"
+
+Sat Dec 25 14:24:00 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/14-write_verilog.log"
+
+Sat Dec 25 14:24:01 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:01 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_cts.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:01 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_sta.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/14-resizer_timing_optimization_sta"
+
+Sat Dec 25 14:24:02 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_resizer_routing_timing.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/routing/15-resizer_timing_optimization.log"
+
+Sat Dec 25 14:24:04 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/16-write_verilog.log"
+
+Sat Dec 25 14:24:04 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:04 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:04 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_sta.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/routing/16-resizer_timing_optimization_sta"
+
+Sat Dec 25 14:24:05 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/placement/18-opendp.log"
+
+Sat Dec 25 14:24:06 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_groute.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/routing/19-fastroute.log"
+
+Sat Dec 25 14:24:07 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_fill.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/routing/20-addspacers.log"
+
+Sat Dec 25 14:24:08 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/21-write_verilog.log"
+
+Sat Dec 25 14:24:09 UTC 2021 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_preroute.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:09 UTC 2021 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openlane\/designs\/asic_watch\/runs\/RUN_2021.12.25_14.23.08\/results\/synthesis\/asic_watch.synthesis_optimized.v/} /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/config.tcl"
+
+Sat Dec 25 14:24:09 UTC 2021 - Executing "openroad -exit /openlane/scripts/openroad/or_droute.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/logs/routing/22-tritonRoute.log"
+
+Sat Dec 25 14:24:10 UTC 2021 - Executing "openroad -python /openlane/scripts/generate_reports.py -d /openlane/designs/asic_watch --design_name asic_watch --tag RUN_2021.12.25_14.23.08 --output_file /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/reports/final_summary_report.csv --man_report /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/reports/manufacturability_report.rpt --runtime_summary /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08/reports/runtime_summary_report.rpt --run_path /openlane/designs/asic_watch/runs/RUN_2021.12.25_14.23.08"
+
