@@ -2,7 +2,7 @@
 // ProjectName: ASIC watch 
 // Description: Maps integers to 7 segment output.
 //              Module is fully combinational
-// Coder      : G.Cabo
+// Coder      : G.Cabo & L.Ledoux
 // References :
 //-----------------------------------------------------
 `default_nettype none

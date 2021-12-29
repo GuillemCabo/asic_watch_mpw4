@@ -1,8 +1,8 @@
 # User config
-set ::env(DESIGN_NAME) "asic_watch"
+set ::env(DESIGN_NAME) "asic_watch2"
 
 # Change if needed
-set ::env(VERILOG_FILES) [glob ./designs/asic_watch/src/*.v]
+set ::env(VERILOG_FILES) [glob ./designs/asic_watch2/src/*.v]
 
 # Fill this
 set ::env(CLOCK_PERIOD) "30517.6"

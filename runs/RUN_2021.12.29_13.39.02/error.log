@@ -1,0 +1,4 @@
+during executing: "yosys -c /openlane/scripts/synth.tcl -l /openlane/designs/asic_watch2/runs/RUN_2021.12.29_13.39.02/logs/synthesis/1-yosys.log |& tee >&@stdout"
+Last 10 lines:
+child process exited abnormally
+

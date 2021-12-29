@@ -14,15 +14,15 @@
 `endif
 
 module crystal2hz (
-    input wire rstn_i, // active low
-    input wire clk_i,  // 32.768 KHz
-    output reg clk_o   //1Hz
+    input wire rst_i, // active high
+    input wire clk_i, // 32.768 KHz
+    output reg clk_o  // 1Hz
 );
 
 //free running counter
 reg [14:0] count_int;
-always @(posedge clk_i, negedge rstn_i) begin : count_15bit
-            if (!rstn_i) begin
+always @(posedge clk_i, posedge rst_i) begin : count_15bit
+            if (rst_i) begin
                 count_int <= 0;
             end else begin
                 count_int <= count_int+1;  
@@ -30,8 +30,8 @@ always @(posedge clk_i, negedge rstn_i) begin : count_15bit
 end
 
 //Clock divider
-always @(posedge clk_i, negedge rstn_i) begin: clk_div
-            if (!rstn_i) begin
+always @(posedge clk_i, posedge rst_i) begin: clk_div
+            if (rst_i) begin
                 clk_o <= 1;
             end else begin
 		// lledoux: expensive 15-bit and reduction and 15-bit comparator

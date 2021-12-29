@@ -1,7 +1,7 @@
 //-----------------------------------------------------
 // ProjectName: ASIC watch 
 // Description: 0 - 14 counter. 2 second increments
-// Coder      : G.Cabo
+// Coder      : G.Cabo & L.Ledoux
 // References :
 //-----------------------------------------------------
 `default_nettype none
@@ -14,15 +14,15 @@
 `endif
 
 module count60s (
-    input wire rstn_i, // active low
+    input wire rst_i, // active high
     input wire clk_i, //1 Hz 
     output reg clk60s_o // 1/60 Hz registered
 );
 
 //free running counter
 reg [4:0] count_int;
-always @(posedge clk_i, negedge rstn_i) begin : count_6bit
-            if (!rstn_i) begin
+always @(posedge clk_i, posedge rst_i) begin : count_6bit
+            if (rst_i) begin
                 count_int <= 0;
             end else begin
                 if (count_int < 14) begin 
@@ -33,8 +33,8 @@ always @(posedge clk_i, negedge rstn_i) begin : count_6bit
             end
 end
 
-always @(posedge clk_i, negedge rstn_i) begin: clk_xxxm
-            if (!rstn_i) begin
+always @(posedge clk_i, posedge rst_i) begin: clk_xxxm
+            if (rst_i) begin
                 clk60s_o <= 1;
             end else begin
                 if (count_int == 14 ) begin 

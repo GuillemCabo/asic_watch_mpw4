@@ -4,7 +4,7 @@
 //              It interfaces with 7-segment driver hh:xx
 //              Since we have to account for hx:xx to update xh:xx both are
 //              in the same module
-// Coder      : G.Cabo
+// Coder      : G.Cabo & L.Ledoux
 // References :
 //-----------------------------------------------------
 `default_nettype none
@@ -17,7 +17,7 @@
 `endif
 
 module count24h (
-    input wire rstn_i, // active low
+    input wire rst_i, // active high
     input wire clk60m_i, // 1/3600 Hz
     input wire [4:0] ival_i, // Initial value
     output reg [3:0] segment0_o, // fully encoded, one-hot decoder needed
@@ -27,8 +27,8 @@ module count24h (
 );
 
 reg [4:0] count_int;
-always @(posedge clk60m_i, negedge rstn_i) begin : count_5bit
-    if (!rstn_i) begin
+always @(posedge clk60m_i, posedge rst_i) begin : count_5bit
+    if (rst_i) begin
         count_int <= ival_i;
     end else begin
         if (count_int < 23 ) begin

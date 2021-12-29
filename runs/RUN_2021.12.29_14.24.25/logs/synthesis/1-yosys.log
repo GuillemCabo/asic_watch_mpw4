@@ -1,0 +1,80 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 UNKNOWN, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+Defining MPRJ_IO_PADS=44
+
+1. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/crystal2hz.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/crystal2hz.v' to AST representation.
+Generating RTLIL representation for module `\crystal2hz'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/asic_watch2.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/asic_watch2.v' to AST representation.
+Generating RTLIL representation for module `\asic_watch2'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/segment7.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/segment7.v' to AST representation.
+Generating RTLIL representation for module `\segment7'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count10m.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count10m.v' to AST representation.
+Generating RTLIL representation for module `\count10m'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count60m.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count60m.v' to AST representation.
+Generating RTLIL representation for module `\count60m'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count60s.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count60s.v' to AST representation.
+Generating RTLIL representation for module `\count60s'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count24h.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count24h.v' to AST representation.
+Generating RTLIL representation for module `\count24h'.
+Successfully finished Verilog frontend.
+
+8. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/asic_watch2/runs/RUN_2021.12.29_14.24.25/tmp/synthesis/hierarchy.dot'.
+Dumping module asic_watch2 to page 1.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \asic_watch2
+Used module:     \segment7
+Used module:     \count24h
+Used module:     \count60m
+Used module:     \count10m
+Used module:     \count60s
+Used module:     \crystal2hz
+ERROR: Module `crystal2hz' referenced in module `asic_watch2' in cell `inst_div32768' does not have a port named 'rst_i'.

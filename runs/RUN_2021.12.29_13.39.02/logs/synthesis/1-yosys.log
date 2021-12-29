@@ -1,0 +1,79 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 UNKNOWN, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+Defining MPRJ_IO_PADS=44
+
+1. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/crystal2hz.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/crystal2hz.v' to AST representation.
+Generating RTLIL representation for module `\crystal2hz'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/asic_watch.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/asic_watch.v' to AST representation.
+Generating RTLIL representation for module `\asic_watch'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/segment7.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/segment7.v' to AST representation.
+Generating RTLIL representation for module `\segment7'.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:25.15-25.35.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:27.16-27.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:29.16-29.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:31.16-31.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:33.16-33.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:35.16-35.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:37.16-37.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:39.16-39.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:41.16-41.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:43.16-43.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:45.16-45.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:47.16-47.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:49.16-49.36.
+Warning: wire '\segments' is assigned in a block at ./designs/asic_watch2/src/segment7.v:51.17-51.37.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count10m.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count10m.v' to AST representation.
+Generating RTLIL representation for module `\count10m'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count60m.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count60m.v' to AST representation.
+Generating RTLIL representation for module `\count60m'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count60s.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count60s.v' to AST representation.
+Generating RTLIL representation for module `\count60s'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: ./designs/asic_watch2/src/count24h.v
+Parsing SystemVerilog input from `./designs/asic_watch2/src/count24h.v' to AST representation.
+Generating RTLIL representation for module `\count24h'.
+Successfully finished Verilog frontend.
+ERROR: No such module: asic_watch2

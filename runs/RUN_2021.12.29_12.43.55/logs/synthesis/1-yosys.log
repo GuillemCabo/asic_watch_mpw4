@@ -1,0 +1,1410 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Wolf <claire@symbioticeda.com>          |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+4052 (git sha1 UNKNOWN, gcc 8.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `exec' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+Defining MPRJ_IO_PADS=44
+
+1. Executing Verilog-2005 frontend: ./designs/asic_watch/src/crystal2hz.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/crystal2hz.v' to AST representation.
+Generating RTLIL representation for module `\crystal2hz'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ./designs/asic_watch/src/asic_watch.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/asic_watch.v' to AST representation.
+Generating RTLIL representation for module `\asic_watch'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ./designs/asic_watch/src/segment7.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/segment7.v' to AST representation.
+Generating RTLIL representation for module `\segment7'.
+Successfully finished Verilog frontend.
+
+4. Executing Verilog-2005 frontend: ./designs/asic_watch/src/count10m.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/count10m.v' to AST representation.
+Generating RTLIL representation for module `\count10m'.
+Successfully finished Verilog frontend.
+
+5. Executing Verilog-2005 frontend: ./designs/asic_watch/src/count60m.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/count60m.v' to AST representation.
+Generating RTLIL representation for module `\count60m'.
+Successfully finished Verilog frontend.
+
+6. Executing Verilog-2005 frontend: ./designs/asic_watch/src/count60s.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/count60s.v' to AST representation.
+Generating RTLIL representation for module `\count60s'.
+Successfully finished Verilog frontend.
+
+7. Executing Verilog-2005 frontend: ./designs/asic_watch/src/count24h.v
+Parsing SystemVerilog input from `./designs/asic_watch/src/count24h.v' to AST representation.
+Generating RTLIL representation for module `\count24h'.
+Successfully finished Verilog frontend.
+
+8. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/synthesis/hierarchy.dot'.
+Dumping module asic_watch to page 1.
+
+9. Executing HIERARCHY pass (managing design hierarchy).
+
+9.1. Analyzing design hierarchy..
+Top module:  \asic_watch
+Used module:     \segment7
+Used module:     \count24h
+Used module:     \count60m
+Used module:     \count10m
+Used module:     \count60s
+Used module:     \crystal2hz
+
+9.2. Analyzing design hierarchy..
+Top module:  \asic_watch
+Used module:     \segment7
+Used module:     \count24h
+Used module:     \count60m
+Used module:     \count10m
+Used module:     \count60s
+Used module:     \crystal2hz
+Removed 0 unused modules.
+
+10. Executing TRIBUF pass.
+
+11. Executing SYNTH pass.
+
+11.1. Executing HIERARCHY pass (managing design hierarchy).
+
+11.1.1. Analyzing design hierarchy..
+Top module:  \asic_watch
+Used module:     \segment7
+Used module:     \count24h
+Used module:     \count60m
+Used module:     \count10m
+Used module:     \count60s
+Used module:     \crystal2hz
+
+11.1.2. Analyzing design hierarchy..
+Top module:  \asic_watch
+Used module:     \segment7
+Used module:     \count24h
+Used module:     \count60m
+Used module:     \count10m
+Used module:     \count60s
+Used module:     \crystal2hz
+Removed 0 unused modules.
+
+11.2. Executing PROC pass (convert processes to netlists).
+
+11.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+11.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count24h.v:83$62 in module count24h.
+Removed 1 dead cases from process $proc$./designs/asic_watch/src/count24h.v:49$60 in module count24h.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count24h.v:49$60 in module count24h.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count24h.v:30$56 in module count24h.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count60s.v:36$52 in module count60s.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count60s.v:24$48 in module count60s.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count60m.v:41$42 in module count60m.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count60m.v:26$38 in module count60m.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count10m.v:41$32 in module count10m.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/count10m.v:26$28 in module count10m.
+Marked 1 switch rules as full_case in process $proc$./designs/asic_watch/src/segment7.v:22$27 in module segment7.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/asic_watch.v:73$23 in module asic_watch.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/asic_watch.v:60$17 in module asic_watch.
+Marked 1 switch rules as full_case in process $proc$./designs/asic_watch/src/asic_watch.v:50$15 in module asic_watch.
+Marked 2 switch rules as full_case in process $proc$./designs/asic_watch/src/crystal2hz.v:33$4 in module crystal2hz.
+Marked 1 switch rules as full_case in process $proc$./designs/asic_watch/src/crystal2hz.v:24$1 in module crystal2hz.
+Removed a total of 1 dead cases.
+
+11.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 12 redundant assignments.
+Promoted 4 assignments to connections.
+
+11.2.4. Executing PROC_INIT pass (extract init attributes).
+
+11.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rstn_i in `\count24h.$proc$./designs/asic_watch/src/count24h.v:30$56'.
+Found async reset \rstn_i in `\count60s.$proc$./designs/asic_watch/src/count60s.v:36$52'.
+Found async reset \rstn_i in `\count60s.$proc$./designs/asic_watch/src/count60s.v:24$48'.
+Found async reset \rstn_i in `\count60m.$proc$./designs/asic_watch/src/count60m.v:41$42'.
+Found async reset \rstn_i in `\count60m.$proc$./designs/asic_watch/src/count60m.v:26$38'.
+Found async reset \rstn_i in `\count10m.$proc$./designs/asic_watch/src/count10m.v:41$32'.
+Found async reset \rstn_i in `\count10m.$proc$./designs/asic_watch/src/count10m.v:26$28'.
+Found async reset \rstn_i in `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:73$23'.
+Found async reset \rstn_i in `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:60$17'.
+Found async reset \rstn_i in `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:50$15'.
+Found async reset \rstn_i in `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:33$4'.
+Found async reset \rstn_i in `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:24$1'.
+
+11.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\count24h.$proc$./designs/asic_watch/src/count24h.v:83$62'.
+     1/2: $2\segment1_o[1:0]
+     2/2: $1\segment1_o[1:0]
+Creating decoders for process `\count24h.$proc$./designs/asic_watch/src/count24h.v:49$60'.
+     1/3: $2\segment0_o[3:1]
+     2/3: $1\segment0_o[3:0] [3:1]
+     3/3: $1\segment0_o[3:0] [0]
+Creating decoders for process `\count24h.$proc$./designs/asic_watch/src/count24h.v:30$56'.
+     1/1: $0\count_int[4:0]
+Creating decoders for process `\count60s.$proc$./designs/asic_watch/src/count60s.v:36$52'.
+     1/1: $0\clk60s_o[0:0]
+Creating decoders for process `\count60s.$proc$./designs/asic_watch/src/count60s.v:24$48'.
+     1/1: $0\count_int[4:0]
+Creating decoders for process `\count60m.$proc$./designs/asic_watch/src/count60m.v:41$42'.
+     1/1: $0\clk60m_o[0:0]
+Creating decoders for process `\count60m.$proc$./designs/asic_watch/src/count60m.v:26$38'.
+     1/1: $0\count_int[2:0]
+Creating decoders for process `\count10m.$proc$./designs/asic_watch/src/count10m.v:41$32'.
+     1/1: $0\clk10m_o[0:0]
+Creating decoders for process `\count10m.$proc$./designs/asic_watch/src/count10m.v:26$28'.
+     1/1: $0\count_int[3:0]
+Creating decoders for process `\segment7.$proc$./designs/asic_watch/src/segment7.v:22$27'.
+     1/1: $1\segments[6:0]
+Creating decoders for process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:73$23'.
+     1/1: $0\cfg_int[11:0]
+Creating decoders for process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:60$17'.
+     1/1: $0\rstn_int[0:0]
+Creating decoders for process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:50$15'.
+     1/1: $0\past_smode[0:0]
+Creating decoders for process `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:33$4'.
+     1/1: $0\clk_o[0:0]
+Creating decoders for process `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:24$1'.
+     1/1: $0\count_int[14:0]
+
+11.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\count24h.\segment1_o' from process `\count24h.$proc$./designs/asic_watch/src/count24h.v:83$62'.
+No latch inferred for signal `\count24h.\segment0_o' from process `\count24h.$proc$./designs/asic_watch/src/count24h.v:49$60'.
+No latch inferred for signal `\segment7.\segments' from process `\segment7.$proc$./designs/asic_watch/src/segment7.v:22$27'.
+
+11.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\count24h.\count_int' using process `\count24h.$proc$./designs/asic_watch/src/count24h.v:30$56'.
+Warning: Async reset value `\ival_i' is not constant!
+  created $dffsr cell `$procdff$136' with positive edge clock and negative level non-const reset.
+Creating register for signal `\count60s.\clk60s_o' using process `\count60s.$proc$./designs/asic_watch/src/count60s.v:36$52'.
+  created $adff cell `$procdff$143' with positive edge clock and negative level reset.
+Creating register for signal `\count60s.\count_int' using process `\count60s.$proc$./designs/asic_watch/src/count60s.v:24$48'.
+  created $adff cell `$procdff$144' with positive edge clock and negative level reset.
+Creating register for signal `\count60m.\clk60m_o' using process `\count60m.$proc$./designs/asic_watch/src/count60m.v:41$42'.
+  created $adff cell `$procdff$145' with positive edge clock and negative level reset.
+Creating register for signal `\count60m.\count_int' using process `\count60m.$proc$./designs/asic_watch/src/count60m.v:26$38'.
+Warning: Async reset value `\ival_i' is not constant!
+  created $dffsr cell `$procdff$146' with positive edge clock and negative level non-const reset.
+Creating register for signal `\count10m.\clk10m_o' using process `\count10m.$proc$./designs/asic_watch/src/count10m.v:41$32'.
+  created $adff cell `$procdff$153' with positive edge clock and negative level reset.
+Creating register for signal `\count10m.\count_int' using process `\count10m.$proc$./designs/asic_watch/src/count10m.v:26$28'.
+Warning: Async reset value `\ival_i' is not constant!
+  created $dffsr cell `$procdff$154' with positive edge clock and negative level non-const reset.
+Creating register for signal `\asic_watch.\cfg_int' using process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:73$23'.
+  created $adff cell `$procdff$161' with positive edge clock and negative level reset.
+Creating register for signal `\asic_watch.\rstn_int' using process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:60$17'.
+  created $adff cell `$procdff$162' with positive edge clock and negative level reset.
+Creating register for signal `\asic_watch.\past_smode' using process `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:50$15'.
+  created $adff cell `$procdff$163' with positive edge clock and negative level reset.
+Creating register for signal `\crystal2hz.\clk_o' using process `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:33$4'.
+  created $adff cell `$procdff$164' with positive edge clock and negative level reset.
+Creating register for signal `\crystal2hz.\count_int' using process `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:24$1'.
+  created $adff cell `$procdff$165' with positive edge clock and negative level reset.
+
+11.2.9. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+11.2.10. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 2 empty switches in `\count24h.$proc$./designs/asic_watch/src/count24h.v:83$62'.
+Removing empty process `count24h.$proc$./designs/asic_watch/src/count24h.v:83$62'.
+Found and cleaned up 2 empty switches in `\count24h.$proc$./designs/asic_watch/src/count24h.v:49$60'.
+Removing empty process `count24h.$proc$./designs/asic_watch/src/count24h.v:49$60'.
+Found and cleaned up 1 empty switch in `\count24h.$proc$./designs/asic_watch/src/count24h.v:30$56'.
+Removing empty process `count24h.$proc$./designs/asic_watch/src/count24h.v:30$56'.
+Found and cleaned up 1 empty switch in `\count60s.$proc$./designs/asic_watch/src/count60s.v:36$52'.
+Removing empty process `count60s.$proc$./designs/asic_watch/src/count60s.v:36$52'.
+Found and cleaned up 1 empty switch in `\count60s.$proc$./designs/asic_watch/src/count60s.v:24$48'.
+Removing empty process `count60s.$proc$./designs/asic_watch/src/count60s.v:24$48'.
+Found and cleaned up 1 empty switch in `\count60m.$proc$./designs/asic_watch/src/count60m.v:41$42'.
+Removing empty process `count60m.$proc$./designs/asic_watch/src/count60m.v:41$42'.
+Found and cleaned up 1 empty switch in `\count60m.$proc$./designs/asic_watch/src/count60m.v:26$38'.
+Removing empty process `count60m.$proc$./designs/asic_watch/src/count60m.v:26$38'.
+Found and cleaned up 1 empty switch in `\count10m.$proc$./designs/asic_watch/src/count10m.v:41$32'.
+Removing empty process `count10m.$proc$./designs/asic_watch/src/count10m.v:41$32'.
+Found and cleaned up 1 empty switch in `\count10m.$proc$./designs/asic_watch/src/count10m.v:26$28'.
+Removing empty process `count10m.$proc$./designs/asic_watch/src/count10m.v:26$28'.
+Found and cleaned up 1 empty switch in `\segment7.$proc$./designs/asic_watch/src/segment7.v:22$27'.
+Removing empty process `segment7.$proc$./designs/asic_watch/src/segment7.v:22$27'.
+Found and cleaned up 1 empty switch in `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:73$23'.
+Removing empty process `asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:73$23'.
+Found and cleaned up 1 empty switch in `\asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:60$17'.
+Removing empty process `asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:60$17'.
+Removing empty process `asic_watch.$proc$./designs/asic_watch/src/asic_watch.v:50$15'.
+Found and cleaned up 1 empty switch in `\crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:33$4'.
+Removing empty process `crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:33$4'.
+Removing empty process `crystal2hz.$proc$./designs/asic_watch/src/crystal2hz.v:24$1'.
+Cleaned up 15 empty switches.
+
+11.3. Executing FLATTEN pass (flatten design).
+Deleting now unused module count24h.
+Deleting now unused module count60s.
+Deleting now unused module count60m.
+Deleting now unused module count10m.
+Deleting now unused module segment7.
+Deleting now unused module crystal2hz.
+<suppressed ~9 debug messages>
+
+11.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~5 debug messages>
+
+11.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 12 unused cells and 61 unused wires.
+<suppressed ~16 debug messages>
+
+11.6. Executing CHECK pass (checking for obvious problems).
+Checking module asic_watch...
+Found and reported 0 problems.
+
+11.7. Executing OPT pass (performing simple optimizations).
+
+11.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~14 debug messages>
+
+11.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+11.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $flatten\inst_count24h.$procmux$69.
+    dead port 1/2 on $mux $flatten\inst_count24h.$procmux$84.
+    dead port 1/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 2/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 3/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 4/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 5/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 6/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 7/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 8/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 9/14 on $pmux $flatten\inst_driverhxxx.$procmux$113.
+    dead port 1/14 on $pmux $flatten\inst_driverxxmx.$procmux$113.
+    dead port 2/14 on $pmux $flatten\inst_driverxxmx.$procmux$113.
+    dead port 3/14 on $pmux $flatten\inst_driverxxmx.$procmux$113.
+    dead port 4/14 on $pmux $flatten\inst_driverxxmx.$procmux$113.
+    dead port 5/14 on $pmux $flatten\inst_driverxxmx.$procmux$113.
+Removed 16 multiplexer ports.
+<suppressed ~25 debug messages>
+
+11.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+    New ctrl vector for $pmux cell $flatten\inst_count24h.$procmux$74: { $flatten\inst_count24h.$procmux$79_CMP $flatten\inst_count24h.$procmux$78_CMP $auto$opt_reduce.cc:134:opt_mux$171 $auto$opt_reduce.cc:134:opt_mux$169 $auto$opt_reduce.cc:134:opt_mux$167 }
+  Optimizing cells in module \asic_watch.
+Performed a total of 1 changes.
+
+11.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.7.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 0 unused cells and 22 unused wires.
+<suppressed ~1 debug messages>
+
+11.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~25 debug messages>
+
+11.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.7.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.7.16. Finished OPT passes. (There is nothing left to do.)
+
+11.8. Executing FSM pass (extract and optimize FSM).
+
+11.8.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+11.8.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+11.8.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+11.8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.8.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+11.8.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+11.8.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+11.8.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+11.9. Executing OPT pass (performing simple optimizations).
+
+11.9.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.9.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.9.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~25 debug messages>
+
+11.9.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.9.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.9.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $procdff$161 ($adff) from module asic_watch (D = \cfg_i, Q = \cfg_int).
+Adding EN signal on $flatten\inst_div60.$procdff$143 ($adff) from module asic_watch (D = $flatten\inst_div60.$not$./designs/asic_watch/src/count60s.v:41$55_Y, Q = \inst_div60.clk60s_o).
+Adding EN signal on $flatten\inst_div32768.$procdff$164 ($adff) from module asic_watch (D = $flatten\inst_div32768.$not$./designs/asic_watch/src/crystal2hz.v:41$8_Y, Q = \inst_div32768.clk_o).
+Adding EN signal on $flatten\inst_count60m.$procdff$145 ($adff) from module asic_watch (D = $flatten\inst_count60m.$not$./designs/asic_watch/src/count60m.v:46$47_Y, Q = \inst_count60m.clk60m_o).
+Adding EN signal on $flatten\inst_count10m.$procdff$153 ($adff) from module asic_watch (D = $flatten\inst_count10m.$not$./designs/asic_watch/src/count10m.v:46$37_Y, Q = \inst_count10m.clk10m_o).
+
+11.9.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 5 unused cells and 5 unused wires.
+<suppressed ~6 debug messages>
+
+11.9.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.9.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.9.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+11.9.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.9.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.9.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.9.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.9.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.9.16. Finished OPT passes. (There is nothing left to do.)
+
+11.10. Executing WREDUCE pass (reducing word size of cells).
+Removed top 28 bits (of 32) from mux cell asic_watch.$ternary$./designs/asic_watch/src/asic_watch.v:42$10 ($mux).
+Removed top 29 bits (of 32) from mux cell asic_watch.$ternary$./designs/asic_watch/src/asic_watch.v:43$12 ($mux).
+Removed top 27 bits (of 32) from mux cell asic_watch.$ternary$./designs/asic_watch/src/asic_watch.v:44$14 ($mux).
+Removed top 31 bits (of 32) from port A of cell asic_watch.$flatten\inst_div32768.$eq$./designs/asic_watch/src/crystal2hz.v:40$7 ($eq).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_div32768.$eq$./designs/asic_watch/src/crystal2hz.v:40$7 ($eq).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_div32768.$add$./designs/asic_watch/src/crystal2hz.v:28$3 ($add).
+Removed top 17 bits (of 32) from port Y of cell asic_watch.$flatten\inst_div32768.$add$./designs/asic_watch/src/crystal2hz.v:28$3 ($add).
+Removed top 1 bits (of 5) from port B of cell asic_watch.$flatten\inst_div60.$eq$./designs/asic_watch/src/count60s.v:40$54 ($eq).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_div60.$add$./designs/asic_watch/src/count60s.v:29$51 ($add).
+Removed top 27 bits (of 32) from port Y of cell asic_watch.$flatten\inst_div60.$add$./designs/asic_watch/src/count60s.v:29$51 ($add).
+Removed top 28 bits (of 32) from port B of cell asic_watch.$flatten\inst_div60.$lt$./designs/asic_watch/src/count60s.v:28$50 ($lt).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_count10m.$eq$./designs/asic_watch/src/count10m.v:45$34 ($eq).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31 ($add).
+Removed top 28 bits (of 32) from port Y of cell asic_watch.$flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31 ($add).
+Removed top 28 bits (of 32) from port B of cell asic_watch.$flatten\inst_count10m.$lt$./designs/asic_watch/src/count10m.v:30$30 ($lt).
+Removed top 1 bits (of 3) from port B of cell asic_watch.$flatten\inst_count60m.$eq$./designs/asic_watch/src/count60m.v:45$44 ($eq).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41 ($add).
+Removed top 29 bits (of 32) from port Y of cell asic_watch.$flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41 ($add).
+Removed top 29 bits (of 32) from port B of cell asic_watch.$flatten\inst_count60m.$lt$./designs/asic_watch/src/count60m.v:30$40 ($lt).
+Removed top 2 bits (of 3) from port B of cell asic_watch.$flatten\inst_count24h.$procmux$78_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell asic_watch.$flatten\inst_count24h.$procmux$77_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell asic_watch.$flatten\inst_count24h.$procmux$76_CMP0 ($eq).
+Removed top 27 bits (of 32) from port B of cell asic_watch.$flatten\inst_count24h.$gt$./designs/asic_watch/src/count24h.v:88$64 ($gt).
+Removed top 28 bits (of 32) from port B of cell asic_watch.$flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:85$63 ($lt).
+Removed top 1 bits (of 5) from port B of cell asic_watch.$flatten\inst_count24h.$le$./designs/asic_watch/src/count24h.v:51$61 ($le).
+Removed top 31 bits (of 32) from port B of cell asic_watch.$flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59 ($add).
+Removed top 27 bits (of 32) from port Y of cell asic_watch.$flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59 ($add).
+Removed top 27 bits (of 32) from port B of cell asic_watch.$flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:34$58 ($lt).
+Removed top 1 bits (of 2) from port B of cell asic_watch.$flatten\inst_driverhxxx.$procmux$125_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$125_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$124_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$123_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$122_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$121_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$120_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxhxx.$procmux$119_CMP0 ($eq).
+Removed top 2 bits (of 3) from port B of cell asic_watch.$flatten\inst_driverxxmx.$procmux$125_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell asic_watch.$flatten\inst_driverxxmx.$procmux$123_CMP0 ($eq).
+Removed top 3 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$125_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$124_CMP0 ($eq).
+Removed top 2 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$123_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$121_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$120_CMP0 ($eq).
+Removed top 1 bits (of 4) from port B of cell asic_watch.$flatten\inst_driverxxxm.$procmux$119_CMP0 ($eq).
+Removed top 28 bits (of 32) from wire asic_watch.$flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31_Y.
+Removed top 27 bits (of 32) from wire asic_watch.$flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59_Y.
+Removed top 29 bits (of 32) from wire asic_watch.$flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41_Y.
+Removed top 31 bits (of 32) from wire asic_watch.$flatten\inst_div32768.$reduce_and$./designs/asic_watch/src/crystal2hz.v:40$6_Y.
+Removed top 2 bits (of 4) from wire asic_watch.val_hxxx.
+
+11.11. Executing PEEPOPT pass (run peephole optimizers).
+
+11.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 0 unused cells and 9 unused wires.
+<suppressed ~1 debug messages>
+
+11.13. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module asic_watch:
+  creating $macc model for $flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31 ($add).
+  creating $macc model for $flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59 ($add).
+  creating $macc model for $flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41 ($add).
+  creating $macc model for $flatten\inst_div32768.$add$./designs/asic_watch/src/crystal2hz.v:28$3 ($add).
+  creating $macc model for $flatten\inst_div60.$add$./designs/asic_watch/src/count60s.v:29$51 ($add).
+  creating $alu model for $macc $flatten\inst_div60.$add$./designs/asic_watch/src/count60s.v:29$51.
+  creating $alu model for $macc $flatten\inst_div32768.$add$./designs/asic_watch/src/crystal2hz.v:28$3.
+  creating $alu model for $macc $flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41.
+  creating $alu model for $macc $flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59.
+  creating $alu model for $macc $flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31.
+  creating $alu model for $flatten\inst_count10m.$lt$./designs/asic_watch/src/count10m.v:30$30 ($lt): new $alu
+  creating $alu model for $flatten\inst_count24h.$gt$./designs/asic_watch/src/count24h.v:88$64 ($gt): new $alu
+  creating $alu model for $flatten\inst_count24h.$le$./designs/asic_watch/src/count24h.v:51$61 ($le): new $alu
+  creating $alu model for $flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:34$58 ($lt): new $alu
+  creating $alu model for $flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:85$63 ($lt): new $alu
+  creating $alu model for $flatten\inst_count60m.$lt$./designs/asic_watch/src/count60m.v:30$40 ($lt): new $alu
+  creating $alu model for $flatten\inst_div60.$lt$./designs/asic_watch/src/count60s.v:28$50 ($lt): new $alu
+  creating $alu model for $flatten\inst_count10m.$eq$./designs/asic_watch/src/count10m.v:45$35 ($eq): merged with $flatten\inst_count10m.$lt$./designs/asic_watch/src/count10m.v:30$30.
+  creating $alu model for $flatten\inst_count60m.$eq$./designs/asic_watch/src/count60m.v:45$45 ($eq): merged with $flatten\inst_count60m.$lt$./designs/asic_watch/src/count60m.v:30$40.
+  creating $alu model for $flatten\inst_div60.$eq$./designs/asic_watch/src/count60s.v:40$54 ($eq): merged with $flatten\inst_div60.$lt$./designs/asic_watch/src/count60s.v:28$50.
+  creating $alu cell for $flatten\inst_div60.$lt$./designs/asic_watch/src/count60s.v:28$50, $flatten\inst_div60.$eq$./designs/asic_watch/src/count60s.v:40$54: $auto$alumacc.cc:485:replace_alu$189
+  creating $alu cell for $flatten\inst_count60m.$lt$./designs/asic_watch/src/count60m.v:30$40, $flatten\inst_count60m.$eq$./designs/asic_watch/src/count60m.v:45$45: $auto$alumacc.cc:485:replace_alu$200
+  creating $alu cell for $flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:85$63: $auto$alumacc.cc:485:replace_alu$211
+  creating $alu cell for $flatten\inst_count24h.$lt$./designs/asic_watch/src/count24h.v:34$58: $auto$alumacc.cc:485:replace_alu$222
+  creating $alu cell for $flatten\inst_count24h.$le$./designs/asic_watch/src/count24h.v:51$61: $auto$alumacc.cc:485:replace_alu$233
+  creating $alu cell for $flatten\inst_count24h.$gt$./designs/asic_watch/src/count24h.v:88$64: $auto$alumacc.cc:485:replace_alu$246
+  creating $alu cell for $flatten\inst_count10m.$lt$./designs/asic_watch/src/count10m.v:30$30, $flatten\inst_count10m.$eq$./designs/asic_watch/src/count10m.v:45$35: $auto$alumacc.cc:485:replace_alu$251
+  creating $alu cell for $flatten\inst_count10m.$add$./designs/asic_watch/src/count10m.v:31$31: $auto$alumacc.cc:485:replace_alu$258
+  creating $alu cell for $flatten\inst_count24h.$add$./designs/asic_watch/src/count24h.v:35$59: $auto$alumacc.cc:485:replace_alu$261
+  creating $alu cell for $flatten\inst_count60m.$add$./designs/asic_watch/src/count60m.v:31$41: $auto$alumacc.cc:485:replace_alu$264
+  creating $alu cell for $flatten\inst_div32768.$add$./designs/asic_watch/src/crystal2hz.v:28$3: $auto$alumacc.cc:485:replace_alu$267
+  creating $alu cell for $flatten\inst_div60.$add$./designs/asic_watch/src/count60s.v:29$51: $auto$alumacc.cc:485:replace_alu$270
+  created 12 $alu and 0 $macc cells.
+
+11.14. Executing SHARE pass (SAT-based resource sharing).
+
+11.15. Executing OPT pass (performing simple optimizations).
+
+11.15.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~7 debug messages>
+
+11.15.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.15.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+11.15.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.15.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.15.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.15.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 6 unused cells and 17 unused wires.
+<suppressed ~7 debug messages>
+
+11.15.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.15.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.15.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+11.15.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.15.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.15.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.15.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.15.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.15.16. Finished OPT passes. (There is nothing left to do.)
+
+11.16. Executing MEMORY pass.
+
+11.16.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+11.16.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+11.16.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.16.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+11.16.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.16.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+11.17. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.18. Executing OPT pass (performing simple optimizations).
+
+11.18.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~8 debug messages>
+
+11.18.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+11.18.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.18.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 5 unused cells and 8 unused wires.
+<suppressed ~6 debug messages>
+
+11.18.5. Finished fast OPT passes.
+
+11.19. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+11.20. Executing OPT pass (performing simple optimizations).
+
+11.20.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.20.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.20.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+11.20.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+    Consolidated identical input bits for $pmux cell $flatten\inst_driverhxxx.$procmux$113:
+      Old ports: A=7'0001000, B=28'1110111100010001111101101110, Y=\segment_hxxx
+      New ports: A=6'001000, B=24'110111100100011110101110, Y={ \segment_hxxx [6] \segment_hxxx [4:0] }
+      New connections: \segment_hxxx [5] = \segment_hxxx [1]
+  Optimizing cells in module \asic_watch.
+Performed a total of 1 changes.
+
+11.20.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.20.6. Executing OPT_SHARE pass.
+
+11.20.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.20.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.20.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.20.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.20.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~19 debug messages>
+
+11.20.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+11.20.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+11.20.14. Executing OPT_SHARE pass.
+
+11.20.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.20.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+11.20.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+11.20.18. Finished OPT passes. (There is nothing left to do.)
+
+11.21. Executing TECHMAP pass (map to technology primitives).
+
+11.21.1. Executing Verilog-2005 frontend: /build/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/build/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+11.21.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$83dd457849c736323edf2edb15923eb27f99c683\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $adffe.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $adff.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$672a140277c71df8314410f22acc08d55222c3c7\_90_alu for cells of type $alu.
+Using template $paramod$7e708ae28ab761f11d0fb59d3ffc72f6a4baf5d9\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $dffsr.
+Using extmapper simplemap for cells of type $logic_or.
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$3b7577489eb4433b1d5620cab7f3794743dee5ea\_90_alu for cells of type $alu.
+Using template $paramod$d31bf4d7d72e59528d18fbd4f322e9d608532043\_90_pmux for cells of type $pmux.
+Using template $paramod$740b056ede97228d3eae64ea2fdc81f0a33e0fe7\_90_alu for cells of type $alu.
+Using template $paramod$78e969f2586efcf3a5b0b0440bcca0db83d5cca2\_90_alu for cells of type $alu.
+Using template $paramod$3ef7d3dd227da7627a99c5e5a6a4deb817573e39\_90_alu for cells of type $alu.
+Using template $paramod$1a3a0c35c4a4896fbfd612699525c057298e72d2\_90_alu for cells of type $alu.
+Using template $paramod$f3115659d5e2977ebd2cb01ff3557fc5f6187689\_90_pmux for cells of type $pmux.
+Using template $paramod$01e52ee61ae9b2e2b5dd627ec32d8ae0205ffa79\_90_pmux for cells of type $pmux.
+Using template $paramod$6ddbcbf6a7078b8fb095edf35f4797a7479a675d\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000010 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000100 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000001111 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000011 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~1255 debug messages>
+
+11.22. Executing OPT pass (performing simple optimizations).
+
+11.22.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~799 debug messages>
+
+11.22.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+<suppressed ~708 debug messages>
+Removed a total of 236 cells.
+
+11.22.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.22.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 44 unused cells and 836 unused wires.
+<suppressed ~45 debug messages>
+
+11.22.5. Finished fast OPT passes.
+
+11.23. Executing ABC pass (technology mapping using ABC).
+
+11.23.1. Extracting gate netlist of module `\asic_watch' to `<abc-temp-dir>/input.blif'..
+Extracted 473 gates and 527 wires to a netlist network with 52 inputs and 93 outputs.
+
+11.23.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+11.23.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       38
+ABC RESULTS:            ANDNOT cells:      146
+ABC RESULTS:               MUX cells:        8
+ABC RESULTS:              NAND cells:       15
+ABC RESULTS:               NOR cells:       25
+ABC RESULTS:               NOT cells:       15
+ABC RESULTS:                OR cells:       88
+ABC RESULTS:             ORNOT cells:       16
+ABC RESULTS:              XNOR cells:        4
+ABC RESULTS:               XOR cells:       21
+ABC RESULTS:        internal signals:      382
+ABC RESULTS:           input signals:       52
+ABC RESULTS:          output signals:       93
+Removing temp directory.
+
+11.24. Executing OPT pass (performing simple optimizations).
+
+11.24.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+<suppressed ~1 debug messages>
+
+11.24.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+<suppressed ~27 debug messages>
+Removed a total of 9 cells.
+
+11.24.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+11.24.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 0 unused cells and 321 unused wires.
+<suppressed ~1 debug messages>
+
+11.24.5. Finished fast OPT passes.
+
+11.25. Executing HIERARCHY pass (managing design hierarchy).
+
+11.25.1. Analyzing design hierarchy..
+Top module:  \asic_watch
+
+11.25.2. Analyzing design hierarchy..
+Top module:  \asic_watch
+Removed 0 unused modules.
+
+11.26. Printing statistics.
+
+=== asic_watch ===
+
+   Number of wires:                387
+   Number of wire bits:            568
+   Number of public wires:          59
+   Number of public wire bits:     212
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                417
+     $_ANDNOT_                     143
+     $_AND_                         36
+     $_DFFE_PN0P_                   12
+     $_DFFE_PN1P_                    4
+     $_DFFSR_PPP_                   12
+     $_DFF_PN0_                     22
+     $_MUX_                          8
+     $_NAND_                        15
+     $_NOR_                         24
+     $_NOT_                         15
+     $_ORNOT_                       16
+     $_OR_                          85
+     $_XNOR_                         4
+     $_XOR_                         21
+
+11.27. Executing CHECK pass (checking for obvious problems).
+Checking module asic_watch...
+Found and reported 0 problems.
+
+12. Generating Graphviz representation of design.
+Writing dot description to `/openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/synthesis/post_techmap.dot'.
+Dumping module asic_watch to page 1.
+
+13. Executing SHARE pass (SAT-based resource sharing).
+
+14. Executing OPT pass (performing simple optimizations).
+
+14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \asic_watch..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \asic_watch.
+Performed a total of 0 changes.
+
+14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\asic_watch'.
+Removed a total of 0 cells.
+
+14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+
+14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module asic_watch.
+
+14.9. Finished OPT passes. (There is nothing left to do.)
+
+15. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 0 unused cells and 38 unused wires.
+<suppressed ~38 debug messages>
+
+16. Printing statistics.
+
+=== asic_watch ===
+
+   Number of wires:                349
+   Number of wire bits:            450
+   Number of public wires:          21
+   Number of public wire bits:      94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                417
+     $_ANDNOT_                     143
+     $_AND_                         36
+     $_DFFE_PN0P_                   12
+     $_DFFE_PN1P_                    4
+     $_DFFSR_PPP_                   12
+     $_DFF_PN0_                     22
+     $_MUX_                          8
+     $_NAND_                        15
+     $_NOR_                         24
+     $_NOT_                         15
+     $_ORNOT_                       16
+     $_OR_                          85
+     $_XNOR_                         4
+     $_XOR_                         21
+
+mapping tbuf
+
+17. Executing TECHMAP pass (map to technology primitives).
+
+17.1. Executing Verilog-2005 frontend: /home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v
+Parsing Verilog input from `/home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tribuff_map.v' to AST representation.
+Generating RTLIL representation for module `\$_TBUF_'.
+Successfully finished Verilog frontend.
+
+17.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+18. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+19. Executing MUXCOVER pass (mapping to wider MUXes).
+Covering MUX trees in module asic_watch..
+  Treeifying 8 MUXes:
+    Found tree with 1 MUXes at root $abc$2689$new_n206_.
+    Found tree with 1 MUXes at root $abc$2689$new_n209_.
+    Found tree with 1 MUXes at root $abc$2689$new_n211_.
+    Found tree with 1 MUXes at root $abc$2689$new_n225_.
+    Found tree with 1 MUXes at root $abc$2689$new_n231_.
+    Found tree with 1 MUXes at root $abc$2689$new_n233_.
+    Found tree with 1 MUXes at root $abc$2689$new_n243_.
+    Found tree with 1 MUXes at root $abc$2689$new_n452_.
+    Finished treeification: Found 8 trees.
+  Covering trees:
+    Replaced tree at $abc$2689$new_n206_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n209_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n211_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n225_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n231_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n233_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n243_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+    Replaced tree at $abc$2689$new_n452_: 1 MUX2, 0 MUX4, 0 MUX8, 0 MUX16
+  Added a total of 0 decoder MUXes.
+<suppressed ~137 debug messages>
+
+20. Executing TECHMAP pass (map to technology primitives).
+
+20.1. Executing Verilog-2005 frontend: /home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux4_map.v
+Parsing Verilog input from `/home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux4_map.v' to AST representation.
+Generating RTLIL representation for module `\$_MUX4_'.
+Successfully finished Verilog frontend.
+
+20.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~3 debug messages>
+
+21. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+22. Executing TECHMAP pass (map to technology primitives).
+
+22.1. Executing Verilog-2005 frontend: /home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux2_map.v
+Parsing Verilog input from `/home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/mux2_map.v' to AST representation.
+Generating RTLIL representation for module `\$_MUX_'.
+Successfully finished Verilog frontend.
+
+22.2. Continuing TECHMAP pass.
+Using template \$_MUX_ for cells of type $_MUX_.
+No more expansions possible.
+<suppressed ~11 debug messages>
+
+23. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+24. Executing TECHMAP pass (map to technology primitives).
+
+24.1. Executing Verilog-2005 frontend: /home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v
+Parsing Verilog input from `/home/zerotoasic/asic_tools/pdk/sky130A/libs.tech/openlane/sky130_fd_sc_hd/latch_map.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+24.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~4 debug messages>
+
+25. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+
+26. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_2 (noninv, pins=3, area=21.27) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__dfbbn_2 (noninv, pins=6, area=35.03) is a direct match for cell type $_DFFSR_NNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_2 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    unmapped dff cell: $_DFF_NN0_
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_2 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    \sky130_fd_sc_hd__dfbbn_2 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    unmapped dff cell: $_DFFSR_PNN_
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+26.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+Mapping DFF cells in module `\asic_watch':
+  mapped 12 $_DFFSR_NNN_ cells to \sky130_fd_sc_hd__dfbbn_2 cells.
+  mapped 34 $_DFF_PN0_ cells to \sky130_fd_sc_hd__dfrtp_2 cells.
+  mapped 4 $_DFF_PN1_ cells to \sky130_fd_sc_hd__dfstp_2 cells.
+
+27. Printing statistics.
+
+=== asic_watch ===
+
+   Number of wires:                452
+   Number of wire bits:            553
+   Number of public wires:          21
+   Number of public wire bits:      94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                469
+     $_ANDNOT_                     143
+     $_AND_                         36
+     $_MUX_                         16
+     $_NAND_                        15
+     $_NOR_                         24
+     $_NOT_                         51
+     $_ORNOT_                       16
+     $_OR_                          85
+     $_XNOR_                         4
+     $_XOR_                         21
+     sky130_fd_sc_hd__dfbbn_2       12
+     sky130_fd_sc_hd__dfrtp_2       34
+     sky130_fd_sc_hd__dfstp_2        4
+     sky130_fd_sc_hd__mux2_1         8
+
+[INFO]: ABC: WireLoad : S_4
+
+28. Executing ABC pass (technology mapping using ABC).
+
+28.1. Extracting gate netlist of module `\asic_watch' to `/tmp/yosys-abc-St3eSw/input.blif'..
+Extracted 411 gates and 489 wires to a netlist network with 78 inputs and 121 outputs.
+
+28.1.1. Executing ABC.
+Running ABC command: /build/bin/yosys-abc -s -f /tmp/yosys-abc-St3eSw/abc.script 2>&1
+ABC: ABC command line: "source /tmp/yosys-abc-St3eSw/abc.script".
+ABC: 
+ABC: + read_blif /tmp/yosys-abc-St3eSw/input.blif 
+ABC: + read_lib -w /openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/trimmed.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.04 sec
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+ABC: Library "sky130_fd_sc_hd__tt_025C_1v80" from "/openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/trimmed.lib" has 175 cells (17 skipped: 14 seq; 3 tri-state; 0 no func; 0 dont_use).  Time =     0.06 sec
+ABC: Memory =    7.77 MB. Time =     0.06 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + read_constr -v /openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/synthesis/yosys.sdc 
+ABC: Setting driving cell to be "sky130_fd_sc_hd__inv_1".
+ABC: Setting output load to be 33.442001.
+ABC: + read_constr /openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/tmp/synthesis/yosys.sdc 
+ABC: + fx 
+ABC: + mfs 
+ABC: + strash 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + retime -D -D 10000.0 -M 5 
+ABC: + scleanup 
+ABC: Error: The network is combinational.
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + refactor 
+ABC: + balance 
+ABC: + rewrite 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + refactor -z 
+ABC: + rewrite -z 
+ABC: + balance 
+ABC: + fraig_store 
+ABC: + fraig_restore 
+ABC: + amap -m -Q 0.1 -F 20 -A 20 -C 5000 
+ABC: + retime -D -D 10000.0 
+ABC: + buffer -N 5 -S 750.0 
+ABC: Node 254 has dup fanin 200.
+ABC: Node 254 has dup fanin 253.
+ABC: Node 254 has dup fanin 200.
+ABC: Node 254 has dup fanin 253.
+ABC: Node 260 has dup fanin 201.
+ABC: Node 260 has dup fanin 259.
+ABC: Node 260 has dup fanin 201.
+ABC: Node 260 has dup fanin 259.
+ABC: Node 426 has dup fanin 39.
+ABC: Node 426 has dup fanin 247.
+ABC: Node 426 has dup fanin 39.
+ABC: Node 426 has dup fanin 247.
+ABC: Node 452 has dup fanin 215.
+ABC: Node 452 has dup fanin 451.
+ABC: Node 452 has dup fanin 215.
+ABC: Node 452 has dup fanin 451.
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_1) in the library.
+ABC: + upsize -D 10000.0 
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_1) in the library.
+ABC: Current delay (2020.57 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000.0 
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_1) in the library.
+ABC: + stime -p 
+ABC: Cannot find the default PI driving cell (sky130_fd_sc_hd__inv_1) in the library.
+ABC: WireLoad = "none"  Gates =    316 ( 42.7 %)   Cap = 15.2 ff (  8.1 %)   Area =     2074.49 ( 56.6 %)   Delay =  2573.13 ps  (  2.2 %)               
+ABC: Path  0 --      41 : 0    3 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  11.8 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     210 : 2    2 sky130_fd_sc_hd__nand2_2  A =   6.26  Df =  53.4  -13.5 ps  S =  57.1 ps  Cin =  4.4 ff  Cout =   7.1 ff  Cmax = 295.7 ff  G =  155  
+ABC: Path  2 --     211 : 1    4 sky130_fd_sc_hd__inv_2    A =   3.75  Df = 101.3   -4.6 ps  S =  55.0 ps  Cin =  4.5 ff  Cout =  10.5 ff  Cmax = 331.4 ff  G =  224  
+ABC: Path  3 --     212 : 3    4 sky130_fd_sc_hd__and3_2   A =   7.51  Df = 324.5   -5.6 ps  S =  91.4 ps  Cin =  1.5 ff  Cout =  13.2 ff  Cmax = 309.5 ff  G =  850  
+ABC: Path  4 --     213 : 4    5 sky130_fd_sc_hd__or4bb_2  A =  12.51  Df = 912.1 -369.8 ps  S = 139.2 ps  Cin =  1.5 ff  Cout =  15.2 ff  Cmax = 312.2 ff  G =  968  
+ABC: Path  5 --     214 : 4    5 sky130_fd_sc_hd__or4_2    A =   8.76  Df =1540.6 -840.1 ps  S = 144.2 ps  Cin =  1.5 ff  Cout =  14.5 ff  Cmax = 310.4 ff  G =  917  
+ABC: Path  6 --     215 : 4    3 sky130_fd_sc_hd__or4b_2   A =  10.01  Df =2193.3-1359.3 ps  S = 114.8 ps  Cin =  1.5 ff  Cout =   6.3 ff  Cmax = 265.5 ff  G =  411  
+ABC: Path  7 --     216 : 4    1 sky130_fd_sc_hd__o2bb2a_2 A =  11.26  Df =2573.1  -21.2 ps  S = 186.5 ps  Cin =  1.8 ff  Cout =  33.4 ff  Cmax = 294.8 ff  G = 1904  
+ABC: Start-point = pi40 (\inst_div32768.count_int [0]).  End-point = po0 ($auto$rtlil.cc:2296:MuxGate$3176).
+ABC: + print_stats -m 
+ABC: netlist                       : i/o =   78/  121  lat =    0  nd =   316  edge =    712  area =2074.32  delay =10.00  lev = 10
+ABC: + write_blif /tmp/yosys-abc-St3eSw/output.blif 
+
+28.1.2. Re-integrating ABC results.
+ABC RESULTS:          _const0_ cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a211o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21bo_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__a221o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a22o_2 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__a2bb2o_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a311o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31o_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a32o_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__and2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and3_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__and4_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__buf_1 cells:       62
+ABC RESULTS:   sky130_fd_sc_hd__inv_2 cells:       71
+ABC RESULTS:   sky130_fd_sc_hd__inv_4 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__nand2_2 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_2 cells:       13
+ABC RESULTS:   sky130_fd_sc_hd__nor3_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21a_2 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_2 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__o221a_2 cells:        7
+ABC RESULTS:   sky130_fd_sc_hd__o221ai_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o22a_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2a_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__o311a_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o32a_2 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o41a_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_2 cells:       25
+ABC RESULTS:   sky130_fd_sc_hd__or2b_2 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or3_2 cells:       19
+ABC RESULTS:   sky130_fd_sc_hd__or3b_2 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__or4_2 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__or4b_2 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__or4bb_2 cells:        1
+ABC RESULTS:        internal signals:      290
+ABC RESULTS:           input signals:       78
+ABC RESULTS:          output signals:      121
+Removing temp directory.
+
+29. Executing SETUNDEF pass (replace undef values with defined constants).
+
+30. Executing HILOMAP pass (mapping to constant drivers).
+
+31. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \asic_watch..
+Removed 0 unused cells and 544 unused wires.
+<suppressed ~1 debug messages>
+
+33. Executing INSBUF pass (insert buffer cells for connected wires).
+Added asic_watch.$auto$insbuf.cc:79:execute$3517: \segment_hxxx [5] -> \segment_hxxx [1]
+Added asic_watch.$auto$insbuf.cc:79:execute$3518: \segment_hxxx [5] -> \segment_hxxx [4]
+
+34. Executing CHECK pass (checking for obvious problems).
+Checking module asic_watch...
+Warning: Wire asic_watch.\segment_xxxm [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxxm [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xxmx [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_xhxx [0] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [6] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [5] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [4] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [3] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [2] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [1] is used but has no driver.
+Warning: Wire asic_watch.\segment_hxxx [0] is used but has no driver.
+Found and reported 28 problems.
+
+35. Printing statistics.
+
+=== asic_watch ===
+
+   Number of wires:                369
+   Number of wire bits:            404
+   Number of public wires:          59
+   Number of public wire bits:      94
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                376
+     sky130_fd_sc_hd__a211o_2        1
+     sky130_fd_sc_hd__a21bo_2        2
+     sky130_fd_sc_hd__a21oi_2        4
+     sky130_fd_sc_hd__a221o_2        1
+     sky130_fd_sc_hd__a22o_2        13
+     sky130_fd_sc_hd__a2bb2o_2       2
+     sky130_fd_sc_hd__a311o_2        1
+     sky130_fd_sc_hd__a31o_2         6
+     sky130_fd_sc_hd__a31oi_2        2
+     sky130_fd_sc_hd__a32o_2         1
+     sky130_fd_sc_hd__and2_2         2
+     sky130_fd_sc_hd__and2b_2        1
+     sky130_fd_sc_hd__and3_2         5
+     sky130_fd_sc_hd__and4_2         2
+     sky130_fd_sc_hd__buf_1         62
+     sky130_fd_sc_hd__buf_2          2
+     sky130_fd_sc_hd__conb_1         1
+     sky130_fd_sc_hd__dfbbn_2       12
+     sky130_fd_sc_hd__dfrtp_2       34
+     sky130_fd_sc_hd__dfstp_2        4
+     sky130_fd_sc_hd__inv_2         71
+     sky130_fd_sc_hd__inv_4          2
+     sky130_fd_sc_hd__mux2_1         8
+     sky130_fd_sc_hd__nand2_2        5
+     sky130_fd_sc_hd__nand2b_2       1
+     sky130_fd_sc_hd__nand3b_2       1
+     sky130_fd_sc_hd__nor2_2        13
+     sky130_fd_sc_hd__nor3_2         3
+     sky130_fd_sc_hd__nor3b_2        1
+     sky130_fd_sc_hd__o211a_2        1
+     sky130_fd_sc_hd__o211ai_2       1
+     sky130_fd_sc_hd__o21a_2        11
+     sky130_fd_sc_hd__o21ai_2       19
+     sky130_fd_sc_hd__o221a_2        7
+     sky130_fd_sc_hd__o221ai_2       1
+     sky130_fd_sc_hd__o22a_2         6
+     sky130_fd_sc_hd__o2bb2a_2       2
+     sky130_fd_sc_hd__o311a_2        3
+     sky130_fd_sc_hd__o32a_2         6
+     sky130_fd_sc_hd__o41a_2         1
+     sky130_fd_sc_hd__or2_2         25
+     sky130_fd_sc_hd__or2b_2         1
+     sky130_fd_sc_hd__or3_2         19
+     sky130_fd_sc_hd__or3b_2         3
+     sky130_fd_sc_hd__or4_2          4
+     sky130_fd_sc_hd__or4b_2         2
+     sky130_fd_sc_hd__or4bb_2        1
+
+   Chip area for module '\asic_watch': 3597.200000
+
+36. Executing Verilog backend.
+Dumping module `\asic_watch'.
+
+Warnings: 29 unique messages, 31 total
+End of script. Logfile hash: c784d33d19, CPU: user 1.07s system 0.04s, MEM: 45.25 MB peak
+Yosys 0.9+4052 (git sha1 UNKNOWN, gcc 8.3.1 -fPIC -Os)
+Time spent: 26% 4x stat (0 sec), 22% 2x abc (0 sec), ...
