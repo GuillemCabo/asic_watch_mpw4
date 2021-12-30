@@ -45,7 +45,6 @@ wire [4:0] xhxx_count;
 assign xhxx_count = count_int[4:0];
 
 //A complete LUT would do the same job
-assign segment0_o[3:0] = 4'b0000;
 always @(*) begin : xhxx_gen
     // for counter values 0 - 9: Counter value match segment output
     if (xhxx_count <= 5'h9) begin
