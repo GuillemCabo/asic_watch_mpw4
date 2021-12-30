@@ -23,7 +23,7 @@ module count60m (
 );
 
 reg [2:0] count_int;
-always @(posedge clk10m_i, posedge rst_i) begin : count_3bit
+always @(posedge clk10m_i) begin : count_3bit
             if (rst_i) begin
                 count_int <= ival_i;
             end else begin
@@ -38,7 +38,7 @@ end
 assign segment_o = {1'b0,count_int};// since max value 6. 4th bit is unused
 
 //xx:mx counter clock
-always @(posedge clk10m_i, posedge rst_i) begin: clk_xxmx
+always @(posedge clk10m_i) begin: clk_xxmx
             if (rst_i) begin
                 clk60m_o <= 1;
             end else begin

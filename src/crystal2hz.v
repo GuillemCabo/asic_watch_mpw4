@@ -21,7 +21,7 @@ module crystal2hz (
 
 //free running counter
 reg [14:0] count_int;
-always @(posedge clk_i, posedge rst_i) begin : count_15bit
+always @(posedge clk_i) begin : count_15bit
             if (rst_i) begin
                 count_int <= 0;
             end else begin
@@ -30,7 +30,7 @@ always @(posedge clk_i, posedge rst_i) begin : count_15bit
 end
 
 //Clock divider
-always @(posedge clk_i, posedge rst_i) begin: clk_div
+always @(posedge clk_i) begin: clk_div
             if (rst_i) begin
                 clk_o <= 1;
             end else begin

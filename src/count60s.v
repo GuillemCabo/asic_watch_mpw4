@@ -21,7 +21,7 @@ module count60s (
 
 //free running counter
 reg [4:0] count_int;
-always @(posedge clk_i, posedge rst_i) begin : count_6bit
+always @(posedge clk_i) begin : count_6bit
             if (rst_i) begin
                 count_int <= 0;
             end else begin
@@ -33,7 +33,7 @@ always @(posedge clk_i, posedge rst_i) begin : count_6bit
             end
 end
 
-always @(posedge clk_i, posedge rst_i) begin: clk_xxxm
+always @(posedge clk_i) begin: clk_xxxm
             if (rst_i) begin
                 clk60s_o <= 1;
             end else begin

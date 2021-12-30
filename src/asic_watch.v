@@ -14,12 +14,11 @@
 `endif
 
 module asic_watch (
-    //input wire clk_system_i, //  10 MHz
-    input wire sysclk_i, // 32.768 KHz shared with SoC
-    input wire smode_i, // safe mode
-    // input wire sclk_i,// safe clock GPIO 32.768 KHz
-    input wire rst_i, // active high
-    input wire dvalid_i, // Data from wishbone is valid
+    input wire sysclk_i,     // 32.768 KHz shared with SoC
+    input wire smode_i,      // safe mode
+    input wire sclk_i,       // safe clock GPIO 32.768 KHz
+    input wire rst_i,        // active high and syncronous to clock
+    input wire dvalid_i,     // Data from wishbone is valid
     input wire [11:0] cfg_i, // initial values for counters
     output wire [6:0] segment_hxxx,
     output wire [6:0] segment_xhxx,
@@ -29,8 +28,7 @@ module asic_watch (
 
 //Clock selector
 wire clk_crystal_i;
-// assign clk_crystal_i = (smode_i)? sclk_i : sysclk_i;
-assign clk_crystal_i = sysclk_i;
+assign clk_crystal_i = (smode_i)? sclk_i : sysclk_i;
 
 //Set initial value of clock
 wire [3:0] cfg_xxxm;
@@ -47,7 +45,7 @@ reg rst_int;
 reg past_smode;
 
 // Keep track of smode changes
-always @(posedge clk_crystal_i, posedge rst_i) begin : gen_past_smode
+always @(posedge clk_crystal_i) begin : gen_past_smode
     if (rst_i) begin
         past_smode <= 0; 
     end else begin
@@ -57,7 +55,7 @@ end
 
 // Issue a reset pulse if Safemode is activated, or a read is performed
 
-always @(posedge clk_crystal_i, posedge rst_i) begin  
+always @(posedge clk_crystal_i) begin  
     if (rst_i) begin
         rst_int <= 1; 
     end else begin
@@ -70,7 +68,7 @@ always @(posedge clk_crystal_i, posedge rst_i) begin
 end
 
 //Update configuration after reset or valid wishbone write
-always @(posedge clk_crystal_i, posedge rst_i) begin : gen_rst_int
+always @(posedge clk_crystal_i) begin : gen_rst_int
     if (rst_i) begin
         cfg_int <= 0;
     end else begin

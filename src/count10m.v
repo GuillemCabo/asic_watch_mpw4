@@ -23,7 +23,7 @@ module count10m (
 );
 
 reg [3:0] count_int;
-always @(posedge clk1m_i, posedge rst_i) begin : count_4bit
+always @(posedge clk1m_i) begin : count_4bit
             if (rst_i) begin
                 count_int <= ival_i;
             end else begin
@@ -38,7 +38,7 @@ end
 assign segment_o = count_int;
 
 //xx:mx counter clock
-always @(posedge clk1m_i, posedge rst_i) begin: clk_xhxx
+always @(posedge clk1m_i) begin: clk_xhxx
             if (rst_i) begin
                 clk10m_o <= 1;
             end else begin

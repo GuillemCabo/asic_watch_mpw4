@@ -1,4 +1,0 @@
-during executing: "openroad -exit /openlane/scripts/openroad/or_droute.tcl |& tee >&@stdout /openlane/designs/asic_watch/runs/RUN_2021.12.29_12.43.55/logs/routing/22-tritonRoute.log"
-Last 10 lines:
-child killed: SIGABRT
-
