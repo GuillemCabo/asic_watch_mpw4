@@ -1,5 +1,5 @@
 //-----------------------------------------------------
-// ProjectName: wrapper for caravel
+// ProjectName: wrapper for caravel step 5.1
 // Description: Top level of the design
 // Coder      : G.Cabo & L.Ledoux
 // References :
@@ -13,7 +13,7 @@
     `endif
 `endif
 
-module wrapper (
+module wrapper_caravel51 (
 `ifdef USE_POWER_PINS
 	input wire vccd1,	// User area 1 1.8V power
 	input wire vssd1,	// User area 1 digital ground
